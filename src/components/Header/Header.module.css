@@ -1,0 +1,10 @@
+.header__wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo {
+    width: 30px;
+}
