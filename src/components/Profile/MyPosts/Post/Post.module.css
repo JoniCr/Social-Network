@@ -1,10 +1,36 @@
+.post {
+    background: #4d5055;
+    width: 600px;
+    min-height: 120px;
+    padding: 20px 0 0 20px;
+}
+
+.post_header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
 .avatar_mini {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     object-fit: cover;
+}
+
+.avatar_mini_wrapper {
+    margin-right: 10px;
+    height: 100%;
+}
+
+.post_header__text {
+    height: 100%;
+}
+
+.post_date {
+    display: block;
+}
+
+.post_body {
+
 }

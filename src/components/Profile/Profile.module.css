@@ -3,17 +3,13 @@ p {
     margin: 0;
 }
 .profile {
-    min-height: 570px;
+    min-height: 1000px;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
+    padding: 10px 0 0 10px;
 }
 
 .about {
     display: grid;
-    padding: 10px 0 0 10px;
     grid-template-columns: 200px 1fr;
     grid-column-gap: 30px;
 }
@@ -21,20 +17,20 @@ p {
 .avatar {
     width: 200px;
     height: 300px;
-    background: url('./../../avatar.jpg');
-    background-repeat: no-repeat;
+    background: url('./../../avatar.jpg') no-repeat;
     background-size: cover;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
 }
 
 .name {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .description p:not(:last-child) {
     margin-bottom: 5px;
+}
+
+.answer {
+    font-weight: 100;
+    margin-left: 5px;
 }

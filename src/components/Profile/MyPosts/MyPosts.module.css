@@ -1,0 +1,44 @@
+.my_posts {
+    padding: 40px 0 0 0;
+}
+
+.textarea_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea {
+    display: block;
+    width: 320px;
+    height: 120px;
+    color: #ffffff;
+    padding: 10px 10px 0 10px;
+    border: none;
+    max-height: 400px;
+    max-width: 700px;
+    background: #4d5055;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.publish_btn {
+    display: block;
+    border: none;
+    height: 30px;
+    width: 110px;
+    background: #2196f3;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.publish_btn:focus {
+    outline: none;
+}
+
+.all_posts {
+    padding-top: 70px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import S from './MyPosts.module.css';
+import S from './MyPosts.module.css'; //styles import
 import Post from './Post/Post';
 
 const MyPosts = () => {
@@ -7,16 +7,18 @@ const MyPosts = () => {
         <div className={S.my_posts}>
                 <div className={S.write_post}>
                     <h2 className={S.write_post__title}>Write a post</h2>
-                    <textarea name="post"></textarea>
-                    <button>Publish</button>
+                    <div className={S.textarea_wrapper}>
+                    <textarea name="post" className={S.textarea} placeholder="What's new?"></textarea>
+                    <button className={S.publish_btn}>Publish</button>
+                    </div>
                 </div>
                 <div className={S.all_posts}>
                         <Post text="Hello it's me"/>
-                        <Post text="Hello my second post"/>
+
                 </div>
         </div>
-    );    
-}
+    )
+};
 
 
 export default MyPosts;
