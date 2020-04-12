@@ -7,30 +7,3 @@ p {
     border-radius: 2px;
     padding: 10px 0 0 10px;
 }
-
-.about {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-column-gap: 30px;
-}
-
-.avatar {
-    width: 200px;
-    height: 300px;
-    background: url('./../../avatar.jpg') no-repeat;
-    background-size: cover;
-    border-radius: 2px;
-}
-
-.name {
-    margin-bottom: 15px;
-}
-
-.description p:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-.answer {
-    font-weight: 100;
-    margin-left: 5px;
-}

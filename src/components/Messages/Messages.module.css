@@ -1,0 +1,53 @@
+ul {
+    list-style: none;
+}
+
+.messages {
+    min-height: 1100px;
+}
+
+.messages_wrapper {
+    display: grid;
+    grid-template-columns: 250px 500px;
+    padding: 20px 0 0 10px;
+
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.dialogues_side {
+    border-right: 1px solid #ffffff;
+}
+
+.dialogue_link {
+    display: flex;
+    align-items: center;
+}
+
+.dialogue_user_avatar {
+    margin-right: 7px;
+}
+
+.messages_list {
+    padding: 0 20px 0 20px;
+}
+
+.message {
+    margin-bottom: 40px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.message_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.message_user_avatar {
+    margin-right: 7px;
+}

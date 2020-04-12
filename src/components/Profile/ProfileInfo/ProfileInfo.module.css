@@ -1,0 +1,26 @@
+.about {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-column-gap: 30px;
+}
+
+.avatar {
+    width: 200px;
+    height: 300px;
+    background: url('https://avatars.mds.yandex.net/get-pdb/1767376/0de9f39a-c664-4469-847a-df2c22b1cc16/s1200?webp=false') no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.name {
+    margin-bottom: 15px;
+}
+
+.description p:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.answer {
+    font-weight: 100;
+    margin-left: 5px;
+}

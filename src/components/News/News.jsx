@@ -3,7 +3,7 @@ import S from './News.module.css';
 
 const News = () => {
     return (
-        <section>
+        <section className={S.news}>
 
         </section>
     )

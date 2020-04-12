@@ -1,7 +1,11 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 .navBar {
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    padding: 20px 0 0 40px;
 }
 
 .ul {

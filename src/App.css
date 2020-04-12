@@ -25,8 +25,7 @@ a {
 .page-container {
   display: grid;
   margin: 0 auto;
-  max-width: 900px;
-  width: 900px;
+  width: 960px;
   grid-template-columns: 200px 9fr;
   column-gap: 10px;
 }
