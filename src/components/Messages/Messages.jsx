@@ -1,20 +1,23 @@
 import React from "react";
 import S from "./Messages.module.css"
-import {NavLink} from "react-router-dom";
 import Message from "./Message/Message";
 import Dialogue from "./Dialogue/Dialogue";
+import {addMessageCreator, updateNewMessageTextCreator} from "../../redux/messages-reducer";
 
 
 const Messages = (props) => {
-
-    const dialogueElements = props.state.dialogues.map(dialogue => <Dialogue userId={dialogue.userId} name={dialogue.name}/>);
+    const dialogueElements = props.state.dialogues.map(dialogue => <Dialogue userId={dialogue.userId}
+                                                                             name={dialogue.name}/>);
     const messageElements = props.state.messages.map(message => <Message message={message.message}/>);
-const newMessage = React.createRef();
 
-const callback = () => {
-    const text = newMessage.current.value;
-    alert(text)
-};
+    const onMessageTextChange = (e) => {
+        const text = e.target.value;
+        props.dispatch(updateNewMessageTextCreator(text));
+    };
+
+    const onSendMessageClick = () => {
+        props.dispatch(addMessageCreator());
+    };
 
     return (
         <section className={`${S.messages} parent`}>
@@ -30,8 +33,15 @@ const callback = () => {
                             {messageElements}
                         </ul>
                         <div className={S.write_message}>
-                            <textarea placeholder="write a message" ref={newMessage}></textarea>
-                            <button className={S.send_message} onClick={callback}>Send</button>
+                            <textarea
+                                onChange={onMessageTextChange}
+                                value={props.state.newMessageText}
+                            />
+
+                            <button className={S.send_message}
+                                    onClick={onSendMessageClick}>
+                                Send
+                            </button>
                         </div>
                     </div>
                 </div>

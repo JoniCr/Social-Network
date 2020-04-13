@@ -7,9 +7,9 @@ const Profile = (props) => {
     return (
         <section className={`${S.profile} parent`}>
             <ProfileInfo/>
-            <MyPosts postsData={props.profilePage.posts} addPost={props.addPost}
+            <MyPosts postsData={props.profilePage.posts}
                      newPostText={props.profilePage.newPostText}
-                        updateNewPostText={props.updateNewPostText}
+                     dispatch={props.dispatch}
             />
         </section>
     )

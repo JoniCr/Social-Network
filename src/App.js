@@ -15,12 +15,14 @@ const App = (props) => {
                 <div className="page-container">
                     <NavBar/>
                     <Route path='/profile' render={() => <Profile
-                        profilePage={props.data.profilePage} addPost={props.addPost}
-                        updateNewPostText={props.updateNewPostText}
+                        profilePage={props.state.profilePage}
+                        dispatch={props.dispatch}
                     />}/>
 
                     <Route path='/messages' render={() => <Messages
-                        state={props.data.messagesPage}/>}/>
+                        state={props.state.messagesPage}
+                        dispatch={props.dispatch}
+                    />}/>
 
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
