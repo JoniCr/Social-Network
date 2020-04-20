@@ -12,3 +12,12 @@
 .pagination {
     margin-right: 10px;
 }
+
+.arrow_img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.arrow_left {
+    transform: rotate(180deg);
+}
