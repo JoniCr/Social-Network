@@ -1,16 +1,14 @@
 import React from 'react';
 import S from './Profile.module.css'; //styles import
-import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-const Profile = (props) => {
+const Profile = props => {
+
     return (
         <section className={`${S.profile} parent`}>
-            <ProfileInfo/>
-            <MyPosts postsData={props.profilePage.posts}
-                     newPostText={props.profilePage.newPostText}
-                     dispatch={props.dispatch}
-            />
+            <ProfileInfo profile={props.profile}/>
+            <MyPostsContainer store={props.store}/>
         </section>
     )
 

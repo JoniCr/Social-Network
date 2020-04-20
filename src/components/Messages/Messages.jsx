@@ -2,22 +2,19 @@ import React from "react";
 import S from "./Messages.module.css"
 import Message from "./Message/Message";
 import Dialogue from "./Dialogue/Dialogue";
-import {addMessageCreator, updateNewMessageTextCreator} from "../../redux/messages-reducer";
 
 
 const Messages = (props) => {
-    const dialogueElements = props.state.dialogues.map(dialogue => <Dialogue userId={dialogue.userId}
-                                                                             name={dialogue.name}/>);
-    const messageElements = props.state.messages.map(message => <Message message={message.message}/>);
+    const dialogueElements = props.messagesPage.dialogues.map(dialogue => <Dialogue userId={dialogue.userId}
+                                                                       name={dialogue.name} key={dialogue.id}/>);
+
+    const messageElements = props.messagesPage.messages.map(message => <Message key={message.id} message={message.message}/>);
 
     const onMessageTextChange = (e) => {
         const text = e.target.value;
-        props.dispatch(updateNewMessageTextCreator(text));
+        props.updateNewMessageText(text);
     };
 
-    const onSendMessageClick = () => {
-        props.dispatch(addMessageCreator());
-    };
 
     return (
         <section className={`${S.messages} parent`}>
@@ -35,11 +32,11 @@ const Messages = (props) => {
                         <div className={S.write_message}>
                             <textarea
                                 onChange={onMessageTextChange}
-                                value={props.state.newMessageText}
+                                value={props.messagesPage.newMessageText}
                             />
 
                             <button className={S.send_message}
-                                    onClick={onSendMessageClick}>
+                                    onClick={props.addMessage}>
                                 Send
                             </button>
                         </div>

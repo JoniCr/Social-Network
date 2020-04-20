@@ -13,6 +13,7 @@ const NavBar = () => {
                     <li className={S.elem}><NavLink to="/news" activeClassName={S.activeLink}>News</NavLink></li>
                     {/*<li className={S.elem}><NavLink to="/music">Music</NavLink></li>*/}
                     {/*<li className={S.elem}><NavLink to="/settings">Settings</NavLink></li>*/}
+                    <li className={S.elem}><NavLink to="/users" activeClassName={S.activeLink}>All users</NavLink></li>
                 </ul>
             </nav>
         </section>

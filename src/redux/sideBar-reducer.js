@@ -1,6 +1,8 @@
 import profileReducer from "./profile-reducer";
 
-const sideBarReducer = (state, action) => {
+let initialState = {};
+
+const sideBarReducer = (state = initialState, action) => {
     return state
 };
 
