@@ -2,6 +2,7 @@ import React from "react";
 import S from "./Messages.module.css"
 import Message from "./Message/Message";
 import Dialogue from "./Dialogue/Dialogue";
+import {Redirect} from "react-router-dom";
 
 
 const Messages = (props) => {
@@ -15,6 +16,9 @@ const Messages = (props) => {
         props.updateNewMessageText(text);
     };
 
+    if(props.isAuth === false) {
+        return <Redirect to='/login'/>
+    }
 
     return (
         <section className={`${S.messages} parent`}>
